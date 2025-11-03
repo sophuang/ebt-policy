@@ -7,7 +7,7 @@
   <meta name="description" content="We outscaled (feed-forward) transformers and generalized reasoning/system 2 thinking to any modality and problem. This is done by training a new class of models called Energy-Based Transformers (EBTs), which are energy based models designed for scalability, parallelizability, stability, and the ability to learn to think from unsupervised learning. The results are absolutely amazing--outscaling feed-forward transformers across modalities and axes (i.e. FLOPs, parameters, depth, even data).">
   <meta property="og:title" content="Energy-Based Transformers: Outscaling Transformers and Generalizable Reasoning"/>
   <meta property="og:description" content="Learn how Energy-Based Transformers (EBTs) enable improved scalability over traditional transformers while generalizing reasoning/thinking capabilities to be learned on any problem. #AI #DeepLearning #EBMs #Transformers #reasonig #system 2 thinking"/>
-  <meta property="og:url" content="https://energy-based-transformers.github.io/"/>
+  <meta property="og:url" content="https://energy-based-transformers.github.io/ebt-policy/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/banner.png" />
   <meta property="og:image:width" content="1200"/>
@@ -53,12 +53,17 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><span style="color: #0066cc;">EBT-Policy:</span>Energy Unlocks Emergent Physical Reasoning Capabilities</h1>
+            <h1 class="title is-1 publication-title"><span style="color: #0066cc;">EBT-Policy:</span> Energy Unlocks Emergent Physical Reasoning Capabilities</h1>
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
+              <!-- Paper authors TODO add all others, fix your website-->
               <span class="author-block">
-                <span class="author-block"><a href="https://nanduruganesh.github.io/" target="_blank">Travis Davies</a>,</span>
+                <span class="author-block"><a href="https://github.com/travisddavies" target="_blank">Travis Davies</a>,</span>
+
                 <a href="https://alexiglad.github.io" target="_blank">Alexi Gladstone</a>,</span>
+
+
+
+                <span class="author-block"><a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">Heng Ji</a>,</span>
                 
               </div>
 
@@ -83,7 +88,7 @@
 
                     <!-- ArXiv abstract Link -->
                   <span class="link-block">
-                    <a href="https://arxiv.org/abs/2507.02092" target="_blank"
+                    <a href="https://arxiv.org/abs/2510.27545" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -92,8 +97,8 @@
                   </a>
                 </span>
 
-              <!-- Github link -->
-              <span class="link-block">
+              <!-- Github link TODO add-->
+              <!-- <span class="link-block">
                 <a href="https://github.com/alexiglad/EBT" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
@@ -101,10 +106,10 @@
                 </span>
                 <span>Code</span>
               </a>
-            </span>
+            </span> -->
 
-            <!-- Blog link -->
-            <span class="link-block">
+            <!-- Blog link TODO write up a blog-->
+            <!-- <span class="link-block">
               <a href="https://alexiglad.github.io/blog/2025/ebt/" target="_blank"
               class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
@@ -112,10 +117,10 @@
               </span>
               <span>Blog</span>
             </a>
-          </span>
+          </span> -->
 
-            <!-- Hugging Face link -->
-            <span class="link-block">
+            <!-- Hugging Face link TODO add to HF-->
+            <!-- <span class="link-block">
               <a href="https://huggingface.co/papers/2507.02092" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
@@ -124,10 +129,10 @@
                 </span>
                 <span>HF Paper</span>
               </a>
-            </span>
+            </span> -->
 
-            <!-- Twitter link -->
-            <span class="link-block">
+            <!-- Twitter link TODO add to twitter-->
+            <!-- <span class="link-block">
               <a href="https://x.com/AlexiGlad/status/1942231878305714462" target="_blank"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
@@ -135,10 +140,10 @@
                 </span>
                 <span>Tweet</span>
               </a>
-            </span>
+            </span> -->
 
-          <!-- YouTube Video link -->
-          <span class="link-block">
+          <!-- YouTube Video link TODO add to YT-->
+          <!-- <span class="link-block">
             <a href="https://youtu.be/RAEy3JZmIaA?si=xNPLMX0miujFQn2B" target="_blank"
             class="external-link button is-normal is-rounded is-dark">
             <span class="icon">
@@ -146,7 +151,7 @@
             </span>
             <span>Video</span>
           </a>
-        </span>
+        </span> -->
 
             
         </div>
@@ -165,7 +170,7 @@
         <h2 class="title is-3">TL;DR</h2>
         <div class="content has-text-justified">
           <p>
-            Energy-Based Transformers (EBTs) <strong>outscale</strong> (feed-forward) transformers while <strong>generalizing</strong> reasoning/system 2 thinking to any modality/problem <strong>without</strong> requiring verifiable rewards! EBTs are the <strong>first approach</strong> to outscale feed-forward transformers across modalities and with respect to several axes including data, depth, parameters, FLOPs, etc. EBTs can also think over every single prediction being made (i.e. every token in language modeling) and <strong>generalize better</strong> than existing models.
+            TODO add TLDR
           </p>
         </div>
       </div>
@@ -187,6 +192,7 @@
         </div>
       </div>
       <h2 class="subtitle has-text-centered">
+        <!-- TODO redo these, add robot videos -->
         Thinking Processes visualized as energy minimization for autoregressive EBTs. Initially, a random prediction is fed into the models, causing the EBT to predict high energy. Then, models iteratively refine these predictions by minimizing the energy through gradient descent (passing the gradient from the energy to predictions). This process is performed until convergence of the energy, enabling the model to know "when to stop thinking."
       </h2>
     </div>
@@ -203,7 +209,7 @@
         <div class="content has-text-justified">
           <zero-md no-shadow data-dedent="12" style="display:block;width:100%;">
             <script type="text/markdown">
-Inference-time computation techniques, analogous to human System 2 Thinking, have recently become popular for improving model performances. However, most existing approaches suffer from several limitations: they are modality-specific (e.g., working only in text), problem-specific (e.g., verifiable domains like math and coding), or require additional supervision/training on top of unsupervised pretraining (e.g., verifiers or verifiable rewards). In this paper, we ask the question _"Is it possible to **generalize** these System 2 Thinking approaches, and **develop models that learn to think solely from unsupervised learning?**"_ Interestingly, we find the answer is **yes**, by learning to explicitly **verify** the compatibility (unnormalized probability) between inputs and candidate-predictions, and then re-framing prediction problems as optimization with respect to this verifier. Specifically, we train Energy-Based Transformers (EBTs)---a new class of Energy-Based Models (EBMs)---to assign an **energy** (unnormalized probability) value to every input and candidate-prediction pair, enabling predictions through gradient descent-based energy minimization until convergence. This formulation enables System 2 Thinking to emerge from unsupervised learning, making it modality and problem agnostic. Across both discrete (text) and continuous (visual) modalities, we find EBTs scale faster than the dominant Transformer++ approach during training, achieving an up to 35% higher scaling rate with respect to data, batch size, parameters, FLOPs, and depth. During inference, EBTs improve performance with System 2 Thinking (i.e., extra computation) by 29% more than the Transformer++ on language tasks, and EBTs outperform Diffusion Transformers on image denoising while using 99% fewer forward passes. Further, we find that System 2 Thinking with EBTs yields larger performance improvements on data that is farther out-of-distribution, and that EBTs achieve better results than existing models on most downstream tasks given the same or worse pretraining performance, enabling EBTs to out-generalize existing paradigms. Consequently, EBTs are a flexible and exciting new paradigm for scaling both the **learning** and **thinking** capabilities of models.
+Implicit policies parameterized by generative models,such as Diffusion Policy, have become the standard for policy learning and Vision-Language-Action (VLA) models in robotics. However, these approaches often suffer from high computational cost, exposure bias, and unstable inference dynamics, which lead to divergence under distribution shifts. Energy-Based Models (EBMs) address these issues by learning energy landscapes endto-end and modeling equilibrium dynamics, offering improved robustness and reduced exposure bias. Yet, policies parameterized by EBMs have historically struggled to scale effectively. Recent work on Energy-Based Transformers (EBTs) [18] demonstrates the scalability of EBMs to high-dimensional spaces, but their potential for solving core challenges in physically embodied models remains underexplored. We introduce a new energy-based architecture, EBT-Policy, that solves core issues in robotic and real-world settings. Across simulated and real-world tasks, EBT-Policy consistently outperforms diffusion-based policies, while requiring less training and inference computation. Remarkably, on some tasks it converges within just two inference steps, a 50x reduction compared to Diffusion Policy's 100. Moreover, EBT-Policy exhibits emergent capabilities not seen in prior models, such as zero-shot recovery from failed action sequences using only behavior cloning and without explicit retry training. By leveraging its scalar energy for uncertainty-aware inference and dynamic compute allocation, EBT-Policy offers a promising path toward robust, generalizable robot behavior under distribution shifts.
             </script>
           </zero-md>
         </div>
@@ -279,8 +285,8 @@ Inference-time computation techniques, analogous to human System 2 Thinking, hav
 
 
 
-<!-- Youtube video -->
-<section class="section">
+<!-- Youtube video TODO fix this-->
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -288,7 +294,7 @@ Inference-time computation techniques, analogous to human System 2 Thinking, hav
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- <section class="hero is-small is-light">
@@ -339,14 +345,14 @@ Inference-time computation techniques, analogous to human System 2 Thinking, hav
       BibTeX
       <button id="copyBibtex" class="button is-small is-dark is-pulled-right">Copy</button>
     </h2>
-    <pre><code id="bibtexCitation">@misc{gladstone2025energybasedtransformersscalablelearners,
-  title={Energy-Based Transformers are Scalable Learners and Thinkers},
-  author={Alexi Gladstone and Ganesh Nanduru and Md Mofijul Islam and Peixuan Han and Hyeonjeong Ha and Aman Chadha and Yilun Du and Heng Ji and Jundong Li and Tariq Iqbal},
-  year={2025},
-  eprint={2507.02092},
-  archivePrefix={arXiv},
-  primaryClass={cs.LG},
-  url={https://arxiv.org/abs/2507.02092}
+    <pre><code id="bibtexCitation">@misc{davies2025ebtpolicyenergyunlocksemergent,
+      title={EBT-Policy: Energy Unlocks Emergent Physical Reasoning Capabilities}, 
+      author={Travis Davies and Yiqi Huang and Alexi Gladstone and Yunxin Liu and Xiang Chen and Heng Ji and Huxian Liu and Luhui Hu},
+      year={2025},
+      eprint={2510.27545},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2510.27545}, 
 }</code></pre>
   </div>
 </section>

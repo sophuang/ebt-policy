@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="TODO">
-  <meta property="og:title" content="Energy-Based Transformers: Outscaling Transformers and Generalizable Reasoning"/>
-  <meta property="og:description" content="Learn how Energy-Based Transformers (EBTs) enable improved scalability over traditional transformers while generalizing reasoning/thinking capabilities to be learned on any problem. #AI #DeepLearning #EBMs #Transformers #reasonig #system 2 thinking"/>
+  <meta name="description" content="EBT-Policy: An instantiation of Energy-Based Transformers for Policies that outperforms Diffusion Policy while using significantly less resources and demonstrating emergent zero-shot retry behavior.">
+  <meta property="og:title" content="⚡️ EBT-Policy: Energy Unlocks Emergent Physical Reasoning Capabilities"/>
+  <meta property="og:description" content="EBT-Policy broadly outperforms Diffusion Policy in both simulated and real-world tasks, while using significantly less (up to 50x less) resources during both training and inference. EBT-Policy is the first vanilla Behavior Cloning approach to demonstrate emergent zero-shot retry behavior."/>
   <meta property="og:url" content="https://energy-based-transformers.github.io/ebt-policy/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/banner.png" />
@@ -14,18 +14,18 @@
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="Energy-Based Transformers: Outscaling Transformers and Generalizable Reasoning">
-  <meta name="twitter:description" content="We outscaled (feed-forward) transformers and generalized reasoning/system 2 thinking to any modality and problem. This is done by training a new class of models called Energy-Based Transformers (EBTs), which are energy based models designed for scalability, parallelizability, stability, and the ability to learn to think from unsupervised learning. The results are absolutely amazing--outscaling feed-forward transformers across modalities and axes (i.e. FLOPs, parameters, depth, even data).">
+  <meta name="twitter:title" content="⚡️ EBT-Policy: Energy Unlocks Emergent Physical Reasoning Capabilities">
+  <meta name="twitter:description" content="EBT-Policy broadly outperforms Diffusion Policy in both simulated and real-world tasks, while using significantly less (up to 50x less) resources during both training and inference. EBT-Policy is the first vanilla Behavior Cloning approach to demonstrate emergent zero-shot retry behavior.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/banner.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="deep learning, ai, reasoning, system 2 thinking, scaling, energy based models, energy-based models, transformers, ebms, verification, scaling law, test-time compute, inference-time compute, cognitively inspired energy based world models">
+  <meta name="keywords" content="deep learning, ai, robotics, policy learning, behavior cloning, energy based models, energy-based models, transformers, ebms, diffusion policy, uncertainty, retry behavior, zero-shot learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>EBT-Policy: Energy Unlocks Emergent Physical Reasoning Capabilities</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🙃</text></svg>">
+  <title>⚡️ EBT-Policy: Energy Unlocks Emergent Physical Reasoning Capabilities</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡️</text></svg>">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -53,27 +53,40 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><span style="color: #0066cc;">EBT-Policy:</span> Energy Unlocks Emergent Physical Reasoning Capabilities</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors TODO add all others, fix your website-->
+            <h1 class="title is-1 publication-title">⚡️ <span style="color: #0066cc;">EBT-Policy:</span> Energy Unlocks Emergent Physical Reasoning Capabilities</h1>
+            <div class="is-size-5 publication-authors" style="margin-bottom: 0.75em;">
               <span class="author-block">
-                <span class="author-block"><a href="https://github.com/travisddavies" target="_blank">Travis Davies</a>,</span>
-
-                <a href="https://alexiglad.github.io" target="_blank">Alexi Gladstone</a>,</span>
-
-
-
-                <span class="author-block"><a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">Heng Ji</a>,</span>
-                
+                <a href="https://github.com/travisddavies" target="_blank">Travis Davies</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://github.com/sophuang" target="_blank">Yiqi Huang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://alexiglad.github.io" target="_blank">Alexi Gladstone</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a>Yunxin Liu</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a>Xiang Chen</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">Heng Ji</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://github.com/liuhuxian" target="_blank">Huxian Liu</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=yRzXdlsAAAAJ&hl=en" target="_blank">Luhui Hu</a><sup>1</sup>
+              </span>
+              <div style="margin-top: 0.5em; font-size: 0.9em; color: #666;">
+                <sup>1</sup>ZhiCheng AI &nbsp;&nbsp;
+                <sup>2</sup>UIUC &nbsp;&nbsp;
+                <sup>3</sup>Tsinghua University &nbsp;&nbsp;
+                <sup>4</sup>Peking University
               </div>
-
-              <!-- <div class="is-size-5 publication-authors">
-                <span class="author-block">Institution Name<br>Conferance name and year</span>
-                <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-              </div> -->
-
-              <div class="column has-text-centered">
-                <div class="publication-links">
+            </div>
+            <div class="publication-links" style="margin-bottom: 1.2em;">
                      <!-- Arxiv PDF link -->
                   <span class="link-block">
                     <a href="static/pdfs/paper.pdf" target="_blank"
@@ -84,8 +97,6 @@
                     <span>Paper</span>
                   </a>
                 </span>
-
-
                     <!-- ArXiv abstract Link -->
                   <span class="link-block">
                     <a href="https://arxiv.org/abs/2510.27545" target="_blank"
@@ -96,64 +107,17 @@
                     <span>arXiv</span>
                   </a>
                 </span>
-
-              <!-- Github link TODO add-->
-              <!-- <span class="link-block">
-                <a href="https://github.com/alexiglad/EBT" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
+              <!-- Code link -->
+              <span class="link-block">
+                <a href="#"
+                  class="button is-normal is-rounded is-dark" style="opacity: 0.6; cursor: not-allowed;" onclick="return false;">
                 <span class="icon">
                   <i class="fab fa-github"></i>
                 </span>
                 <span>Code</span>
-              </a>
-            </span> -->
-
-            <!-- Blog link TODO write up a blog-->
-            <!-- <span class="link-block">
-              <a href="https://alexiglad.github.io/blog/2025/ebt/" target="_blank"
-              class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fas fa-newspaper"></i>
+                  <span style="margin-left: 0.5em; font-size: 0.85em; opacity: 0.8;">(Coming Soon)</span>
+                </a>
               </span>
-              <span>Blog</span>
-            </a>
-          </span> -->
-
-            <!-- Hugging Face link TODO add to HF-->
-            <!-- <span class="link-block">
-              <a href="https://huggingface.co/papers/2507.02092" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg"
-                       alt="Hugging Face" style="height:1em;" />
-                </span>
-                <span>HF Paper</span>
-              </a>
-            </span> -->
-
-            <!-- Twitter link TODO add to twitter-->
-            <!-- <span class="link-block">
-              <a href="https://x.com/AlexiGlad/status/1942231878305714462" target="_blank"
-                 class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-twitter"></i>
-                </span>
-                <span>Tweet</span>
-              </a>
-            </span> -->
-
-          <!-- YouTube Video link TODO add to YT-->
-          <!-- <span class="link-block">
-            <a href="https://youtu.be/RAEy3JZmIaA?si=xNPLMX0miujFQn2B" target="_blank"
-            class="external-link button is-normal is-rounded is-dark">
-            <span class="icon">
-              <i class="fab fa-youtube"></i>
-            </span>
-            <span>Video</span>
-          </a>
-        </span> -->
-
-            
         </div>
       </div>
     </div>
@@ -161,47 +125,55 @@
 </div>
 </section>
 
-
-<!-- TLDR -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">TL;DR</h2>
-        <div class="content has-text-justified">
-          <p>
-            TODO add TLDR
-          </p>
+  <!-- Highlights / TL;DR Section -->
+  <section class="section" style="background: #f9fafb;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 has-text-centered" style="margin-bottom: 0.8em;">TL;DR</span></h2>
+          <div class="content has-text-justified">
+            <p class="is-size-5" style="margin-bottom: 1em;">
+              Implicit policies parameterized by generative models, such as Diffusion Policy, have become the standard for policy learning and Vision–Language–Action (VLA) models in robotics. However, these approaches often suffer from high computational cost, exposure bias, and unstable inference dynamics, which lead to divergence under distribution shifts.
+            </p>
+            <p class="is-size-5" style="margin-bottom: 1em;">
+              We introduce <strong>EBT-Policy</strong>, a new energy-based architecture that solves core issues in robotic and real-world settings. EBT-Policy consistently outperforms diffusion-based policies across simulated and real-world tasks, while requiring significantly less training and inference computation.
+            </p>
+            <hr style="margin: 1.5em 0; border: none; border-top: 1px solid #ddd;">
+            <ul class="is-size-5" style="list-style: none; padding-left: 0; margin: 1em 0;">
+              <li style="margin-bottom: 0.6em;"><strong>⚡️ 50× faster inference</strong> — converges in just 2 steps vs. Diffusion Policy's 100</li>
+              <li style="margin-bottom: 0.6em;"><strong>⚡️ 66% fewer training epochs</strong> — faster convergence during training</li>
+              <li style="margin-bottom: 0.6em;"><strong>⚡️ Emergent zero-shot retry behavior</strong> — recovers from failures using only behavior cloning data, without explicit retry training</li>
+              <li style="margin-bottom: 0.6em;"><strong>⚡️ Uncertainty-aware inference</strong> — leverages scalar energy for dynamic compute allocation</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <div class="columns is-vcentered">
-        <div class="column has-text-centered">
-          <img src="static/gifs/ezgif.com-animated-gif-maker_video.gif" alt="Energy Based Transformer Video Prediction as Thinking" class="teaser-gif">
-        </div>
-        <div class="column has-text-centered">
-          <img src="static/gifs/ezgif.com-animated-gif-maker_text.gif" alt="Energy Based Transformer Language Model Prediction as Thinking" class="teaser-gif">
+  <!-- How It Works Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content is-size-5 has-text-justified">
+            <div style="margin-bottom: 1.5em; text-align: center;">
+              <img src="static/images/main.png" alt="Energy landscape minimization and uncertainty modeling diagram" style="max-width: 100%; border-radius: 12px; box-shadow: 0 2px 12px #eee;">
+            </div>
+            <p style="margin-bottom: 1em;">
+              <strong>Explaining Uncertainty Modeling.</strong> Twelve frames are grouped into three phases: (1) Tool Insertion, (2) Hook Hanging Attempt, and (3) Recovery & Successful Retry. The color bar beneath each frame encodes per-frame energy predicted by the model, where a lower energy indicates higher certainty in EBT-Policy. Notably, red (Step 7) marks the failure that triggers an EBT-Policy retry, while green (Step 11) marks the successful correction. Together, these steps highlight EBT-Policy's interpretability and physical reasoning: using energy-based uncertainty to decide whether to continue or retry and how to adjust actions.
+            </p>
+            <p>
+              <strong>Explaining Energy Minimization.</strong> EBT-Policy receives inputs (RGB frames, robotic proprioception, and language instructions) and assigns an energy to candidate action trajectories. Starting from a noisy initialization, the trajectory is iteratively updated by gradient descent on this energy, yielding starting states to a final executable plan. Optimization terminates when the energy converges to a minimum, as illustrated by the energy-landscape sketch.
+            </p>
+          </div>
         </div>
       </div>
-      <h2 class="subtitle has-text-centered">
-        <!-- TODO redo these, add robot videos -->
-        Thinking Processes visualized as energy minimization for autoregressive EBTs. Initially, a random prediction is fed into the models, causing the EBT to predict high energy. Then, models iteratively refine these predictions by minimizing the energy through gradient descent (passing the gradient from the energy to predictions). This process is performed until convergence of the energy, enabling the model to know "when to stop thinking."
-      </h2>
     </div>
-  </div>
-</section>
-<!-- End teaser video -->
+  </section>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
+  <!-- Paper abstract -->
+<section class="section" style="background: #f9fafb;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -209,7 +181,7 @@
         <div class="content has-text-justified">
           <zero-md no-shadow data-dedent="12" style="display:block;width:100%;">
             <script type="text/markdown">
-Implicit policies parameterized by generative models,such as Diffusion Policy, have become the standard for policy learning and Vision-Language-Action (VLA) models in robotics. However, these approaches often suffer from high computational cost, exposure bias, and unstable inference dynamics, which lead to divergence under distribution shifts. Energy-Based Models (EBMs) address these issues by learning energy landscapes endto-end and modeling equilibrium dynamics, offering improved robustness and reduced exposure bias. Yet, policies parameterized by EBMs have historically struggled to scale effectively. Recent work on Energy-Based Transformers (EBTs) [18] demonstrates the scalability of EBMs to high-dimensional spaces, but their potential for solving core challenges in physically embodied models remains underexplored. We introduce a new energy-based architecture, EBT-Policy, that solves core issues in robotic and real-world settings. Across simulated and real-world tasks, EBT-Policy consistently outperforms diffusion-based policies, while requiring less training and inference computation. Remarkably, on some tasks it converges within just two inference steps, a 50x reduction compared to Diffusion Policy's 100. Moreover, EBT-Policy exhibits emergent capabilities not seen in prior models, such as zero-shot recovery from failed action sequences using only behavior cloning and without explicit retry training. By leveraging its scalar energy for uncertainty-aware inference and dynamic compute allocation, EBT-Policy offers a promising path toward robust, generalizable robot behavior under distribution shifts.
+Implicit policies parameterized by generative models,such as Diffusion Policy, have become the standard for policy learning and Vision-Language-Action (VLA) models in robotics. However, these approaches often suffer from high computational cost, exposure bias, and unstable inference dynamics, which lead to divergence under distribution shifts. Energy-Based Models (EBMs) address these issues by learning energy landscapes endto-end and modeling equilibrium dynamics, offering improved robustness and reduced exposure bias. Yet, policies parameterized by EBMs have historically struggled to scale effectively. Recent work on Energy-Based Transformers (EBTs) demonstrates the scalability of EBMs to high-dimensional spaces, but their potential for solving core challenges in physically embodied models remains underexplored. We introduce a new energy-based architecture, EBT-Policy, that solves core issues in robotic and real-world settings. Across simulated and real-world tasks, EBT-Policy consistently outperforms diffusion-based policies, while requiring less training and inference computation. Remarkably, on some tasks it converges within just two inference steps, a 50x reduction compared to Diffusion Policy's 100. Moreover, EBT-Policy exhibits emergent capabilities not seen in prior models, such as zero-shot recovery from failed action sequences using only behavior cloning and without explicit retry training. By leveraging its scalar energy for uncertainty-aware inference and dynamic compute allocation, EBT-Policy offers a promising path toward robust, generalizable robot behavior under distribution shifts.
             </script>
           </zero-md>
         </div>
@@ -218,6 +190,219 @@ Implicit policies parameterized by generative models,such as Diffusion Policy, h
   </div>
 </section>
 <!-- End paper abstract -->
+
+<!-- Demo / Videos -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Demonstrations</h2>
+        <div class="content has-text-justified">
+          
+          <!-- RoboMimic Benchmark Subsection -->
+          <h3 class="title is-4" style="margin-top: 1.5em; margin-bottom: 1em;">RoboMimic Benchmark</h3>
+          <div class="columns is-vcentered" style="flex-wrap: nowrap;">
+            <!-- Can Task -->
+            <div class="column is-3-desktop is-half-tablet is-full-mobile has-text-centered" style="flex-shrink: 0;">
+              <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                <source src="static/videos/can.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="is-size-6" style="margin-top: 0.5em;">
+                <strong>Can</strong>
+                <br>
+                Robotic can manipulation task demonstrating robust performance.
+              </div>
+            </div>
+            <!-- Lift Task -->
+            <div class="column is-3-desktop is-half-tablet is-full-mobile has-text-centered" style="flex-shrink: 0;">
+              <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                <source src="static/videos/lift.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="is-size-6" style="margin-top: 0.5em;">
+                <strong>Lift</strong>
+                <br>
+                Object lifting task showcasing energy-based policy learning.
+              </div>
+            </div>
+            <!-- Square Task -->
+            <div class="column is-3-desktop is-half-tablet is-full-mobile has-text-centered" style="flex-shrink: 0;">
+              <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                <source src="static/videos/square.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="is-size-6" style="margin-top: 0.5em;">
+                <strong>Square</strong>
+                <br>
+                Square nut assembly task with precise manipulation.
+              </div>
+            </div>
+            <!-- Tool Hang Task -->
+            <div class="column is-3-desktop is-half-tablet is-full-mobile has-text-centered" style="flex-shrink: 0;">
+              <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                <source src="static/videos/tool_hang.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="is-size-6" style="margin-top: 0.5em;">
+                <strong>Tool Hang</strong>
+                <br>
+                Tool hanging task demonstrating complex retry capability.
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-World Tasks Subsection -->
+          <h3 class="title is-4" style="margin-top: 2em; margin-bottom: 1em;">Real-World Tasks</h3>
+          
+          <!-- Fold Towel Task -->
+          <div style="margin-bottom: 2em;">
+            <div class="columns is-multiline is-variable is-5">
+              <div class="column is-half-desktop is-half-tablet is-full-mobile has-text-centered">
+                <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                  <source src="static/videos/foldtowel_1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-half-desktop is-half-tablet is-full-mobile has-text-centered">
+                <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                  <source src="static/videos/foldtowel_2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="is-size-6 has-text-centered" style="margin-top: 0.5em;">
+              <strong>Fold Towel (3 inference steps)</strong>
+              <br>
+              Real-world robotic towel folding with robust generalization and consistent performance across variations.
+            </div>
+          </div>
+
+          <!-- Pick and Place Task -->
+          <div style="margin-bottom: 2em;">
+            <div class="columns is-multiline is-variable is-5">
+              <div class="column is-half-desktop is-half-tablet is-full-mobile has-text-centered">
+                <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                  <source src="static/videos/pickplace_1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-half-desktop is-half-tablet is-full-mobile has-text-centered">
+                <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                  <source src="static/videos/pickplace_2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="is-size-6 has-text-centered" style="margin-top: 0.5em;">
+              <strong>Pick and Place (3 inference steps)</strong>
+              <br>
+              Demonstrates emergent behavior with robust manipulation and uncertainty-aware inference.
+            </div>
+          </div>
+
+          <!-- Place two Plates Task -->
+          <div style="margin-bottom: 2em;">
+            <div class="columns is-multiline is-variable is-5">
+              <div class="column is-half-desktop is-half-tablet is-full-mobile has-text-centered">
+                <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                  <source src="static/videos/place2plates_1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-half-desktop is-half-tablet is-full-mobile has-text-centered">
+                <video controls style="width:100%;max-width:100%;border-radius:8px;" poster="">
+                  <source src="static/videos/place2plates_2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <div class="is-size-6 has-text-centered" style="margin-top: 0.5em;">
+              <strong>Place two Plates (3 inference steps)</strong>
+              <br>
+              Precise placement task showcasing energy-based reasoning and energy landscape optimization for accurate placement.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Results -->
+<section class="section" style="background: #f9fafb;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        
+        <!-- Success Rates and Variants Comparison Side by Side -->
+        <div class="columns is-vcentered" style="margin-top: 2em; margin-bottom: 2em;">
+          <!-- Left Column: Success Rates Figure -->
+          <div class="column is-half-desktop is-full-mobile">
+            <div style="text-align: center; margin-bottom: 1em;">
+              <img src="static/images/step_performance.png" alt="Success Rates During Training" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 12px #eee;">
+            </div>
+            <div class="content has-text-justified">
+              <p class="is-size-6" style="text-align: center; margin-top: 0.5em;">
+                <strong>Success Rates During Training.</strong> EBT-Policy exhibits rapid performance improvement, reaching 100% success by epoch 30, using just 2 iterations for predicting actions. Diffusion Policy (DP), on the other hand, only reaches a 100% success rate after 90 epochs, and uses 50 times more steps than EBT-Policy at inference, demonstrating how EBT-Policy is more efficient than DP during both training and inference.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: EBT-Policy Variants Comparison Table -->
+          <div class="column is-half-desktop is-full-mobile">
+            <div style="overflow-x: auto;">
+              <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="margin-bottom: 0.5em;">
+                <thead>
+                  <tr>
+                    <th><strong>Property</strong></th>
+                    <th><strong>EBT-Policy-S</strong></th>
+                    <th><strong>EBT-Policy-R</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Size</td>
+                    <td>~30M</td>
+                    <td>~100M</td>
+                  </tr>
+                  <tr>
+                    <td>Task</td>
+                    <td>Simulation</td>
+                    <td>Real World</td>
+                  </tr>
+                  <tr>
+                    <td>Language Encoder</td>
+                    <td>N/A</td>
+                    <td>T5-S</td>
+                  </tr>
+                  <tr>
+                    <td>Vision Encoder</td>
+                    <td>ResNet-18</td>
+                    <td>DINOv3-S</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="content has-text-justified">
+              <p class="is-size-6" style="text-align: center; margin-top: 0.5em;">
+                <strong>Comparison of EBT-Policy variants.</strong> EBT-Policy-S is a compact Transformer used for controlled simulation studies, while EBT-Policy-R is a larger multimodal variant designed for real-world, language-conditioned, and multitask policy learning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 
 
 <!-- Image carousel -->
